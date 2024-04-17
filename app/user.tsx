@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 export async function User() {
   const session = await auth();
+  console.log('🚀 ~ User ~ session:', session);
+
   const user = session?.user;
 
   if (!user) {
